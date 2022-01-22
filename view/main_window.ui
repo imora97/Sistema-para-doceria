@@ -60,7 +60,7 @@
         <pointsize>20</pointsize>
         <weight>50</weight>
         <bold>false</bold>
-        <underline>true</underline>
+        <underline>false</underline>
        </font>
       </property>
       <property name="text">
@@ -116,25 +116,6 @@
       </property>
       <property name="text">
        <string>Escolha sua opção:</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_5">
-      <property name="geometry">
-       <rect>
-        <x>140</x>
-        <y>230</y>
-        <width>141</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Segoe Print</family>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="duvida">
@@ -206,7 +187,7 @@
       <property name="font">
        <font>
         <family>Segoe Print</family>
-        <pointsize>14</pointsize>
+        <pointsize>12</pointsize>
        </font>
       </property>
       <property name="text">
@@ -230,6 +211,25 @@
       </property>
       <property name="text">
        <string>Link para whatsapp(sem mostrar o link)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="duvida_2">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>230</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe Print</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Dúvidas</string>
       </property>
      </widget>
     </widget>

@@ -1,6 +1,5 @@
 from controller.catalogo import CatalogoDoces
 from controller.duvidas import Duvidas
-from controller.inicio import Inicio
 from controller.observacao import Obs
 from controller.zap import ChamaZap
 from qt_core import *
@@ -13,18 +12,18 @@ class MainWindow(QMainWindow):
         uic.loadUi('view/main_window.ui', self)
 
         # página inicial
-        self.stackedWidget.insertWidget(0, Inicio())
+       # self.stackedWidget.insertWidget(0, Inicio())
 
         # ações botões
-        self.botaologo.clicked.connect(self.Inicio)
+        #self.botaologo.clicked.connect(self.Inicio)
         self.catalog.clicked.connect(self.CatalogoDoces)
         self.duvida.clicked.connect(self.Duvidas)
         self.obs.clicked.connect(self.Obs)
         self.zap.clicked.connect(self.ChamaZap)
 
-    def Inicio(self):
-        self.stackedWidget.insertWidget(0, Inicio())
-        self.stackedWidget.setCurrentIndex(0)
+    #def Inicio(self):
+     #   self.stackedWidget.insertWidget(0, Inicio())
+      #  self.stackedWidget.setCurrentIndex(0)
         
     def CatalogoDoces(self):
         self.stackedWidget.insertWidget(0, CatalogoDoces())
