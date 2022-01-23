@@ -4,5 +4,5 @@ class Obs(QWidget):
 
     def __init__(self):
         super().__init__()
-        uic.loadUi('view/observacao.ui', self)
+        uic.loadUi('view/obs.ui', self)
         

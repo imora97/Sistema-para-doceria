@@ -25,7 +25,7 @@ class Cadastro(QWidget):
         novo_doce = Doces(None, nome, peso, tipo, valor)
         doces_dao.adicionar(novo_doce)
 
-        # atualiza tabela
+        # atualiza tabela # CONCLUIR
         self.janela_doces.carrega_dados()
         
         # fecha janela
