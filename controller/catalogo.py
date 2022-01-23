@@ -11,15 +11,28 @@ class CatalogoDoces(QWidget):
         # bottons
         self.brigadeiro.clicked.connect(self.brigadeiro)
         self.beijinho.clicked.connect(self.beijinho)
+        """self.bolo_p.clicked.connect(self.bolop)
+        self.bolo_m.clicked.connect(self.bolom)
+        self.bolo_g.clicked.connect(self.bolog)"""
+
+
 
 
     def brigadeiro(self):
-        self.painel_pricipal.insertWidget(brigadeiro())
         self.gridLayout.setCurrentIndex()
 
     def beijinho(self):
-        self.gridLayout.insertWidget(beijinho())
         self.gridLayout.setCurrentIndex()
 
+    """def bolop(self):
+        self.gridLayout.insertWidget(0, bolop())
+        self.bolop.setCurrentIndex(0)
 
+    def bolom(self):
+        self.gridLayout.insertWidget(0, bolom())
+        self.bolom.setCurrentIndex(0)
+
+    def bolog(self):
+        self.gridLayout.insertWidget(0, bolog())
+        self.bolog.setCurrentIndex(0)"""
         

@@ -80,7 +80,7 @@
       </widget>
      </item>
      <item row="3" column="1" colspan="2">
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="brigadeiro">
        <property name="font">
         <font>
          <family>Segoe Print</family>
@@ -108,7 +108,7 @@
       </widget>
      </item>
      <item row="3" column="4">
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="bolo_p">
        <property name="font">
         <font>
          <family>Segoe Print</family>
@@ -136,7 +136,7 @@
       </widget>
      </item>
      <item row="4" column="1" colspan="2">
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="beijinho">
        <property name="font">
         <font>
          <family>Segoe Print</family>
@@ -164,7 +164,7 @@
       </widget>
      </item>
      <item row="4" column="4">
-      <widget class="QPushButton" name="pushButton_4">
+      <widget class="QPushButton" name="bolo_m">
        <property name="font">
         <font>
          <family>Segoe Print</family>
@@ -192,7 +192,7 @@
       </widget>
      </item>
      <item row="5" column="4">
-      <widget class="QPushButton" name="pushButton_5">
+      <widget class="QPushButton" name="bolo_g">
        <property name="font">
         <font>
          <family>Segoe Print</family>

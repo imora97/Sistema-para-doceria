@@ -7,7 +7,3 @@ class brigadeiro(QWidget):
         uic.loadUi('view/brigadeiro.ui', self)
         
         self.janela_cadastro = janela_cadastro
-
-    
-
-

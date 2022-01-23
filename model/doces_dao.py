@@ -1,5 +1,5 @@
 
-
+# lista para armazenar os doces
 
 lista_doces = []
 
