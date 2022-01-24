@@ -19,7 +19,7 @@ class Cadastro(QWidget):
         nome = self.nome.text()
         peso = self.peso.text()
         tipo = self.tipo.value()
-        valor = self.valor.text()
+        valor = self.valor.text() #***
 
         # cria o cadastro 
         novo_doce = Doces(None, nome, peso, tipo, valor)

@@ -20,17 +20,17 @@ class MainWindow(QMainWindow):
 
 
     def CatalogoDoces(self):
-        self.stackedWidget.insertWidget(0, CatalogoDoces())
+        self.painel_principal.insertWidget(0, CatalogoDoces())
         self.painel_principal.setCurrentIndex(0)
 
     def Duvidas(self):
-        self.stackedWidget.insertWidget(0, Duvidas())
+        self.painel_principal.insertWidget(0, Duvidas())
         self.painel_principal.setCurrentIndex(0)
 
     def Obs(self):
-        self.stackedWidget.insertWidget(0, Obs())
+        self.painel_principal.insertWidget(0, Obs())
         self.painel_principal.setCurrentIndex(0)
 
     def ChamaZap(self):
-        self.stackedWidget.insertWidget(0, ChamaZap())
+        self.painel_principal.insertWidget(0, ChamaZap())
         self.painel_principal.setCurrentIndex(0)
