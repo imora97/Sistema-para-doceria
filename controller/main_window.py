@@ -1,6 +1,6 @@
 from controller.catalogo import CatalogoDoces
 from controller.duvidas import Duvidas
-from controller.observacao import Obs
+from controller.obs import Obs
 from controller.zap import ChamaZap
 from qt_core import *
 
