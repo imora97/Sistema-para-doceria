@@ -1,4 +1,4 @@
-from qt_core import*
+from qt_core import *
 
 class ChamaZap(QWidget):
 
