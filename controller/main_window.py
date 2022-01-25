@@ -18,7 +18,6 @@ class MainWindow(QMainWindow):
         self.obs.clicked.connect(self.Obs)
         self.zap.clicked.connect(self.ChamaZap)
 
-
     def CatalogoDoces(self):
         self.painel_principal.insertWidget(0, CatalogoDoces())
         self.painel_principal.setCurrentIndex(0)
