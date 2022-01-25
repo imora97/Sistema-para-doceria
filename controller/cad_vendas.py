@@ -69,9 +69,9 @@ class CadVenda(QWidget):
 
     #def pega_cliente(self):
 
-    #def finalizar_cad(self):
-       # print(f"Cliente: {self.cliente_atual.nome}")
+    def finalizar_cad(self):
+        print(f"Cliente: {self.cliente_atual.nome}")
 
-    #def cancelar_cad(self):
+    def cancelar_cad(self):
         # fecha janela
-        #self.close()
+        self.close()
