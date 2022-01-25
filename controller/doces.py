@@ -1,10 +1,10 @@
-from controller.cad_doces import Cadastro
+from controller.cad_doces import CadDoce
 import model.doces_dao as doces_dao
 from qt_core import*
 
 
 class DocesPage(QWidget):
-    
+
     def __init__(self):
         super().__init__()
         uic.loadUi('view/doces.ui', self)
@@ -21,7 +21,7 @@ class DocesPage(QWidget):
 
     def novo_doce(self):
         # cria a janela de cadastro
-        self.doce_window = Cadastro(self)
+        self.doce_window = CadDoce(self)
         self.doce_window.show()
 
     def carrega_dados(self):

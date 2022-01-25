@@ -53,7 +53,7 @@ class CadVenda(QWidget):
         for c in self.lista_clientes:
             lista.append(c.nome)
         # lista nomes dos clientes
-            # CONCLUIR 
+            """CONCLUIR"""
         # pega o INDEX do cliente selecionado
 
     def carrega_doce(self):
@@ -62,7 +62,9 @@ class CadVenda(QWidget):
         for d in self.lista_doces:
            # self.doces_listWidget.addItem(d.nome)
 
-    # CONCLUIRRRR
+        #self.pecas_listWidget.currentRowChanged.connect(self.pega_peca) # PARA LEMBRAR
+
+            """CONCLUIRRRR"""
     #def pega_doce(self):
 
     #def pega_cliente(self):

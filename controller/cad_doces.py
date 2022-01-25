@@ -3,7 +3,7 @@ import model.doces_dao as doces_dao
 from qt_core import *
 
 
-class Cadastro(QWidget):
+class CadDoce(QWidget):
 
     def __init__(self, janela_doces):
         super().__init__()
@@ -26,7 +26,7 @@ class Cadastro(QWidget):
         doces_dao.adicionar(novo_doce)
 
         # atualiza tabela
-        self.janela_doces.carrega_dados()
+        self.janela_doces.carrega_dados() ####* NÃO TEM FUNÇÃO??
         
         # fecha janela
         self.close()
