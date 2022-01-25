@@ -6,39 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>719</width>
-    <height>526</height>
+    <width>646</width>
+    <height>481</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout_2">
-    <item>
-     <widget class="QLabel" name="label">
-      <property name="font">
-       <font>
-        <family>Segoe Print</family>
-        <pointsize>20</pointsize>
-        <weight>50</weight>
-        <bold>false</bold>
-        <underline>false</underline>
-       </font>
-      </property>
-      <property name="text">
-       <string>Doceria</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="Line" name="line">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-    </item>
-    <item>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
      <widget class="QPushButton" name="botaologo">
       <property name="font">
        <font>
@@ -72,103 +49,133 @@
       </property>
      </widget>
     </item>
-    <item>
-     <widget class="QStackedWidget" name="painel_principal">
-      <property name="currentIndex">
-       <number>-1</number>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_3">
+    <item row="0" column="2">
+     <widget class="QLabel" name="label">
       <property name="font">
        <font>
         <family>Segoe Print</family>
-        <pointsize>12</pointsize>
+        <pointsize>20</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+        <underline>false</underline>
        </font>
       </property>
       <property name="text">
-       <string>Como posso te ajudar hoje?</string>
+       <string>Doceria</string>
       </property>
      </widget>
     </item>
-    <item>
-     <widget class="QLabel" name="label_2">
-      <property name="font">
-       <font>
-        <family>Segoe Print</family>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Escolha sua opção:</string>
+    <item row="1" column="0" rowspan="2" colspan="3">
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
       </property>
      </widget>
     </item>
-    <item>
-     <widget class="QPushButton" name="catalog">
-      <property name="font">
-       <font>
-        <family>Segoe Print</family>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Catálogo Doces</string>
+    <item row="2" column="1" rowspan="2">
+     <widget class="Line" name="line_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
       </property>
      </widget>
     </item>
-    <item>
-     <widget class="QPushButton" name="duvida">
-      <property name="font">
-       <font>
-        <family>Segoe Print</family>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Dúvidas</string>
-      </property>
-     </widget>
+    <item row="3" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="font">
+         <font>
+          <family>Segoe Print</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Como posso te ajudar hoje?</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="font">
+         <font>
+          <family>Segoe Print</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Escolha sua opção:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="catalog">
+        <property name="font">
+         <font>
+          <family>Segoe Print</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Catálogo Doces</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="duvida">
+        <property name="font">
+         <font>
+          <family>Segoe Print</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Dúvidas</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="obs">
+        <property name="font">
+         <font>
+          <family>Segoe Print</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Observações</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="zap">
+        <property name="font">
+         <font>
+          <family>Segoe Print</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Chamar no zap</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCommandLinkButton" name="commandLinkButton">
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Link para whatsapp(sem mostrar o link)</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
-    <item>
-     <widget class="QPushButton" name="obs">
-      <property name="font">
-       <font>
-        <family>Segoe Print</family>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Observações</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="zap">
-      <property name="font">
-       <font>
-        <family>Segoe Print</family>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Chamar no zap</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QCommandLinkButton" name="commandLinkButton">
-      <property name="font">
-       <font>
-        <family>Segoe UI</family>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Link para whatsapp(sem mostrar o link)</string>
-      </property>
-     </widget>
+    <item row="3" column="2">
+     <widget class="QStackedWidget" name="painel_principal"/>
     </item>
    </layout>
   </widget>
@@ -177,7 +184,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>719</width>
+     <width>646</width>
      <height>21</height>
     </rect>
    </property>
