@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>633</width>
-    <height>427</height>
+    <width>625</width>
+    <height>460</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -45,20 +45,44 @@
       </font>
      </property>
      <property name="text">
-      <string>Doce</string>
+      <string>Item</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="nome">
+    <widget class="QComboBox" name="item">
      <property name="font">
       <font>
        <family>Segoe Print</family>
        <pointsize>10</pointsize>
       </font>
      </property>
-     <property name="placeholderText">
-      <string>Digite o nome do doce</string>
+     <property name="editable">
+      <bool>false</bool>
+     </property>
+     <property name="duplicatesEnabled">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>true</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="add_item">
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Adicionar item</string>
      </property>
     </widget>
    </item>
@@ -71,12 +95,12 @@
       </font>
      </property>
      <property name="text">
-      <string>Peso</string>
+      <string>Quantidade</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="peso">
+    <widget class="QLineEdit" name="quantidade">
      <property name="font">
       <font>
        <family>Segoe Print</family>
@@ -84,7 +108,7 @@
       </font>
      </property>
      <property name="placeholderText">
-      <string>Digite o peso</string>
+      <string>Digite a quantidade *</string>
      </property>
     </widget>
    </item>
@@ -144,12 +168,12 @@
       </font>
      </property>
      <property name="text">
-      <string>Valor em R$</string>
+      <string>Valor total da venda em R$</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="valor">
+    <widget class="QLineEdit" name="valor_venda_cad">
      <property name="font">
       <font>
        <family>Segoe Print</family>
@@ -157,25 +181,12 @@
       </font>
      </property>
      <property name="placeholderText">
-      <string>Digite o valor (ex. 0,00)</string>
+      <string>Digite o valor (ex. 0,00) *</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="salvar">
-     <property name="font">
-      <font>
-       <family>Segoe Print</family>
-       <pointsize>10</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Salvar</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QPushButton" name="cancelar">
+    <widget class="QPushButton" name="cancelecad">
      <property name="font">
       <font>
        <family>Segoe Print</family>
@@ -184,6 +195,19 @@
      </property>
      <property name="text">
       <string>Cancelar</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="finalizecad">
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Finalizar</string>
      </property>
     </widget>
    </item>

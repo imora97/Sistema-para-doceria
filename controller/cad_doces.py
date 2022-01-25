@@ -3,11 +3,11 @@ import model.doces_dao as doces_dao
 from qt_core import *
 
 
-
 class Cadastro(QWidget):
+
     def __init__(self, janela_doces):
         super().__init__()
-        uic.loadUi("view/cadastro.ui", self)
+        uic.loadUi("view/cadastrodoces.ui", self)
 
         self.janela_doces = janela_doces
 
@@ -19,13 +19,13 @@ class Cadastro(QWidget):
         nome = self.nome.text()
         peso = self.peso.text()
         tipo = self.tipo.value()
-        valor = self.valor.text() #***
+        valor = self.valor.text() #*** PQ 'VALOR'?
 
         # cria o cadastro 
         novo_doce = Doces(None, nome, peso, tipo, valor)
         doces_dao.adicionar(novo_doce)
 
-        # atualiza tabela # CONCLUIR
+        # atualiza tabela
         self.janela_doces.carrega_dados()
         
         # fecha janela
