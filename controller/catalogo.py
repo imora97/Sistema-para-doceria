@@ -3,6 +3,7 @@ from qt_core import*
 import model.doces_dao as doces_dao
 from controller.cad_doces import CadDoce
 
+
 class CatalogoDoces(QWidget):
 
     def __init__(self):
@@ -11,7 +12,6 @@ class CatalogoDoces(QWidget):
     
         self.carrega_dados()
 
-        #botão novo doce
         self.doce_bolo.clicked.connect(self.abre_cad_doce)
 
         # configuração tabela - 
@@ -28,11 +28,11 @@ class CatalogoDoces(QWidget):
         for l in lista:
             self.add_linha(l)
 
-    """def add_linha(self, l):
+    def add_linha(self, l):
         rowCount = self.tabela.rowCount()
-        self.tabela.insertRow(rowCount)"""
+        self.tabela.insertRow(rowCount)
 
-        # CONCLUIR
+        #_____________________________________CONCLUIR
     """id = (str(l.id))
         nome = (str(l.nome))
         peso = (str(l.peso))
@@ -40,5 +40,5 @@ class CatalogoDoces(QWidget):
         valor = (str(l.valor))"""
 
         # insere elementos a tabela na coluna correspondente (linha, coluna, item)
-        # CONCLUIR
+        #_____________________________________CONCLUIR
     """self.tabela.setItem(rowCount, 0, id)"""

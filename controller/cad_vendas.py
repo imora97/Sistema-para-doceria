@@ -33,11 +33,7 @@ class CadVenda(QWidget):
             # cria novo item
             item = {'quantidade': self.quantidade.text(),
                 'doce': self.doce_atual}
-            # adiciona na lista de itens
             self.lista_itens.append(item)
-
-            """self.vendas_window = CadVenda(self)
-            self.vendas_window.show()""" #** seguindo a lógica de catálogo
 
             self.atualiza_dados_cad_venda()
 
@@ -49,32 +45,27 @@ class CadVenda(QWidget):
         # somar valores da multiplicaçao entre a quantidade itens * valor do doce
 
     def carrega_cliente(self):
-        # lista clientes
         self.lista_clientes = clientes_dao.lista_clientes
-        # armazena nomes dos clientes
         lista = []
         for c in self.lista_clientes:
             lista.append(c.nome)
-        # lista nomes dos clientes
-            """CONCLUIR"""
+            #________________________________CONCLUIR
         # pega o INDEX do cliente selecionado
 
     def carrega_doce(self):
-        # lista doces
         self.lista_doces = doces_dao.lista_doces
         for d in self.lista_doces:
-           # self.doces_listWidget.addItem(d.nome)
+           self.doces_listWidget.addItem(d.nome)
 
-        #self.pecas_listWidget.currentRowChanged.connect(self.pega_peca) # PARA LEMBRAR
+        self.pecas_listWidget.currentRowChanged.connect(self.pega_peca) # PARA LEMBRAR
 
-            """CONCLUIRRRR"""
+            #________________________________CONCLUIR
     #def pega_doce(self):
 
     #def pega_cliente(self):
 
-    def finalizar_cad(self):
-        print(f"Cliente: {self.cliente_atual.nome}")
+    #def finalizar_cad(self):
+        #print(f"Cliente: {self.cliente_atual.nome}")
 
-    def cancelar_cad(self):
-        # fecha janela
-        self.close()
+    #def cancelar_cad(self):
+        #self.close()

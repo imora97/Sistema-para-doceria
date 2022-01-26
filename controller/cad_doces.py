@@ -18,29 +18,32 @@ class CadDoce(QWidget):
         # pegar os dados lançados 
         nome = self.nome.text()
         peso = self.peso.text()
-        tipo = self.tipo.items() #***
+        tipo = self.tipo.currentText()
         valor = self.valor.text()
 
         if self.nome.text() == '' or self.peso.text() == '' or self.valor.text() == '':
             print('Dados obrigatórios *')
         else:
             # cria novo item
-            item_1 = {'nome': self.nome.text(),
+            item1 = {'nome': self.nome.text(),
             'peso': self.peso.text(),
-            'tipo': self.tipo.text(),
-            'valor': self.valor.text()} # O QUE É ISSO????
-
-
-        # cria o cadastro 
-        """novo_doce = Doces(None, nome, peso, tipo, valor)
-        doces_dao.adicionar(novo_doce)""" # ESSE 'NOVO DOCE' SAIU DE ONDE, PELO AMOR DE PAI??!
+            'tipo': self.tipo.currentText(),
+            'valor': self.valor.text()}
 
         # atualiza tabela
-        self.janela_doces.carrega_dados() ####* NÃO TEM FUNÇÃO??
+        self.janela_doces.carrega_dados()        
         
-        # fecha janela
         self.close()
 
+    def carrega_dados(self):
+        cadlista = doces_dao.lista_doces
+        self.tabela.setRowCount(0)
+        for db in cadlista:
+            self.add_linha(db)
+
+    def add_linha(self, db):
+        rowCount = self.tabela.rowCount()
+        self.tabela.insertRow(rowCount)
+
     def cancelar_doce(self):
-        # fecha janela
         self.close()

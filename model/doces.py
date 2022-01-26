@@ -8,3 +8,6 @@ class Doces():
         self.peso = peso
         self.tipo = tipo
         self.valor = valor
+
+    def imprime(self):
+        print(f'{self.id}, {self.nome}, {self.peso}, {self.tipo}, {self.valor}')
