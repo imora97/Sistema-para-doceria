@@ -18,17 +18,17 @@ class CadDoce(QWidget):
         # pegar os dados lançados 
         nome = self.nome.text()
         peso = self.peso.text()
-        tipo = self.tipo.value()
-        valor = self.valor.text() #*** PQ 'VALOR'?
+        tipo = self.tipo.items() #***
+        valor = self.valor.text()
 
-        """if self.nome.text() == '' or self.peso.text() == '' or self.valor.text() == '':
+        if self.nome.text() == '' or self.peso.text() == '' or self.valor.text() == '':
             print('Dados obrigatórios *')
         else:
             # cria novo item
             item_1 = {'nome': self.nome.text(),
             'peso': self.peso.text(),
             'tipo': self.tipo.text(),
-            'valor': self.valor.text()}""" # O QUE É ISSO????
+            'valor': self.valor.text()} # O QUE É ISSO????
 
 
         # cria o cadastro 

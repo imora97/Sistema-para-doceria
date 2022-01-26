@@ -31,10 +31,13 @@ class CadVenda(QWidget):
             print('Dados obrigatórios *')
         else:
             # cria novo item
-            """item = {'quantidade': self.quantidade.text(),
+            item = {'quantidade': self.quantidade.text(),
                 'doce': self.doce_atual}
             # adiciona na lista de itens
-            self.lista_itens.append(item)"""
+            self.lista_itens.append(item)
+
+            """self.vendas_window = CadVenda(self)
+            self.vendas_window.show()""" #** seguindo a lógica de catálogo
 
             self.atualiza_dados_cad_venda()
 

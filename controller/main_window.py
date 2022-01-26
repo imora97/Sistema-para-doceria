@@ -11,7 +11,6 @@ class MainWindow(QMainWindow):
         super().__init__()
         uic.loadUi('view/main_window.ui', self)
 
-
         # ações botões
         self.catalog.clicked.connect(self.CatalogoDoces)
         self.duvida.clicked.connect(self.Duvidas)

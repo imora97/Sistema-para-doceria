@@ -1,3 +1,4 @@
+from model.doces import Doces
 from qt_core import*
 import model.doces_dao as doces_dao
 from controller.cad_doces import CadDoce
@@ -20,13 +21,12 @@ class CatalogoDoces(QWidget):
         # abre a janela de cadastro
         self.doce_window = CadDoce(self)
         self.doce_window.show()
-        # AQUI DEVERIA FICAR O CAMINHO QUE O BOTÃO FAZ PARA ABRIR A JANELA CADASTRO, eu acho
 
-    """def carrega_dados(self):
+    def carrega_dados(self):
         lista = doces_dao.lista_doces
         self.tabela.setRowCount(0)
         for l in lista:
-            self.add_linha(l)"""
+            self.add_linha(l)
 
     """def add_linha(self, l):
         rowCount = self.tabela.rowCount()
