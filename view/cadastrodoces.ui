@@ -162,19 +162,6 @@
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="salvar">
-     <property name="font">
-      <font>
-       <family>Segoe Print</family>
-       <pointsize>10</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Salvar</string>
-     </property>
-    </widget>
-   </item>
-   <item>
     <widget class="QPushButton" name="cancelar">
      <property name="font">
       <font>
@@ -184,6 +171,19 @@
      </property>
      <property name="text">
       <string>Cancelar</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="finalizar">
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Finalizar</string>
      </property>
     </widget>
    </item>

@@ -6,43 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>631</width>
+    <width>665</width>
     <height>473</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout">
-   <item row="5" column="3">
-    <widget class="QPushButton" name="botaologo_6">
-     <property name="font">
-      <font>
-       <family>Segoe Print</family>
-      </font>
-     </property>
-     <property name="text">
-      <string>foto</string>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="4">
-    <widget class="QLabel" name="label_8">
-     <property name="font">
-      <font>
-       <family>Segoe Print</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Bolo G</string>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="2" colspan="2">
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
     <widget class="QLabel" name="label">
      <property name="font">
       <font>
@@ -57,149 +29,96 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="0" rowspan="2" colspan="5">
+   <item>
     <widget class="Line" name="line">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
    </item>
-   <item row="2" column="1">
-    <widget class="QLabel" name="label_2">
+   <item>
+    <widget class="QPushButton" name="doce_bolo">
      <property name="font">
       <font>
        <family>Segoe Print</family>
-       <pointsize>12</pointsize>
+       <pointsize>10</pointsize>
       </font>
      </property>
      <property name="text">
-      <string>Doces</string>
+      <string>Novo doce/bolo</string>
      </property>
     </widget>
    </item>
-   <item row="3" column="0">
-    <widget class="QPushButton" name="botaologo">
+   <item>
+    <widget class="QLineEdit" name="pesquisa">
      <property name="font">
       <font>
        <family>Segoe Print</family>
+       <pointsize>10</pointsize>
       </font>
      </property>
-     <property name="text">
-      <string>foto</string>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
+     <property name="placeholderText">
+      <string>Pesquise o doce/bolo</string>
      </property>
     </widget>
    </item>
-   <item row="3" column="1" colspan="2">
-    <widget class="QLabel" name="label_4">
-     <property name="font">
-      <font>
-       <family>Segoe Print</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Brigadeiro</string>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="4">
-    <widget class="QLabel" name="label_3">
-     <property name="font">
-      <font>
-       <family>Segoe Print</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Bolos</string>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="3">
-    <widget class="QPushButton" name="botaologo_4">
-     <property name="font">
-      <font>
-       <family>Segoe Print</family>
-      </font>
-     </property>
-     <property name="text">
-      <string>foto</string>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="4">
-    <widget class="QLabel" name="label_7">
-     <property name="font">
-      <font>
-       <family>Segoe Print</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Bolo M</string>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="0">
-    <widget class="QPushButton" name="botaologo_2">
-     <property name="font">
-      <font>
-       <family>Segoe Print</family>
-      </font>
-     </property>
-     <property name="text">
-      <string>foto</string>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="1" colspan="2">
-    <widget class="QLabel" name="label_5">
-     <property name="font">
-      <font>
-       <family>Segoe Print</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Beijinho</string>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="4">
-    <widget class="QLabel" name="label_6">
-     <property name="font">
-      <font>
-       <family>Segoe Print</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Bolo P</string>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="3">
-    <widget class="QPushButton" name="botaologo_3">
-     <property name="font">
-      <font>
-       <family>Segoe Print</family>
-      </font>
-     </property>
-     <property name="text">
-      <string>foto</string>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
+   <item>
+    <widget class="QTableWidget" name="tabela">
+     <column>
+      <property name="text">
+       <string>ID</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe Print</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Nome</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe Print</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Peso</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe Print</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Tipo</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe Print</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Valor</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe Print</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </column>
     </widget>
    </item>
   </layout>
