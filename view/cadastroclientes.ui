@@ -30,6 +30,19 @@
     </widget>
    </item>
    <item>
+    <widget class="QPushButton" name="cad_v">
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Cadastro de vendas</string>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="Line" name="line">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>

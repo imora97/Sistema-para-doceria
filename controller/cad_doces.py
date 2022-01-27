@@ -1,3 +1,4 @@
+from controller.cad_clientes import CadCliente
 import model.doces_dao as doces_dao
 from qt_core import *
 
@@ -6,7 +7,7 @@ class CadDoce(QWidget):
 
     def __init__(self, janela_doces):
         super().__init__()
-        uic.loadUi("view/cadastrodoces.ui", self)
+        uic.loadUi('view/cadastrodoces.ui', self)
 
         self.janela_doces = janela_doces     #### essa janela tem utilidade??
 
@@ -15,6 +16,8 @@ class CadDoce(QWidget):
 
         self.finalizar.clicked.connect(self.salvar_doce)
         self.cancelar.clicked.connect(self.cancelar_doce)
+        self.cad_c.clicked.connect(self.abre_cad_cliente)
+
 
     def salvar_doce(self):
         if self.nome.text() == '' or self.peso.text() == '' or self.valor.text() == '':
@@ -34,6 +37,10 @@ class CadDoce(QWidget):
     def add_linha(self, db):
         rowCount = self.tabela.rowCount()
         self.tabela.insertRow(rowCount)
+
+    def abre_cad_cliente(self):
+        self.cliente_window = CadCliente(self)
+        self.cliente_window.show()
 
     def cancelar_doce(self):
         self.close()

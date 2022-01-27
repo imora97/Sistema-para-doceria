@@ -25,7 +25,20 @@
       </font>
      </property>
      <property name="text">
-      <string>Cadastro de doces</string>
+      <string>Cadastro de doces/bolos</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="cad_c">
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Cadastro de clientes</string>
      </property>
     </widget>
    </item>
