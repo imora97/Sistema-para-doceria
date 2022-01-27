@@ -1,4 +1,3 @@
-from model.doces import Doces
 import model.doces_dao as doces_dao
 from qt_core import *
 
@@ -15,20 +14,8 @@ class CadDoce(QWidget):
         self.cancelar.clicked.connect(self.cancelar_doce)
 
     def salvar_doce(self):
-        # pegar os dados lançados 
-        nome = self.nome.text()
-        peso = self.peso.text()
-        tipo = self.tipo.currentText()
-        valor = self.valor.text()
-
         if self.nome.text() == '' or self.peso.text() == '' or self.valor.text() == '':
             print('Dados obrigatórios *')
-        else:
-            # cria novo item
-            item1 = {'nome': self.nome.text(),
-            'peso': self.peso.text(),
-            'tipo': self.tipo.currentText(),
-            'valor': self.valor.text()}
 
         # atualiza tabela
         self.janela_doces.carrega_dados()        

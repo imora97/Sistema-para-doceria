@@ -57,7 +57,7 @@ class CadVenda(QWidget):
         for d in self.lista_doces:
            self.doces_listWidget.addItem(d.nome)
 
-        self.pecas_listWidget.currentRowChanged.connect(self.pega_peca) # PARA LEMBRAR
+        self.pecas_listWidget.currentRowChanged.connect(self.pega_peca) ##### PARA LEMBRAR
 
             #________________________________CONCLUIR
     #def pega_doce(self):
