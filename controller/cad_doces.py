@@ -8,7 +8,10 @@ class CadDoce(QWidget):
         super().__init__()
         uic.loadUi("view/cadastrodoces.ui", self)
 
-        self.janela_doces = janela_doces
+        self.janela_doces = janela_doces     #### essa janela tem utilidade??
+
+        # lista
+        self.lista_doces = None
 
         self.finalizar.clicked.connect(self.salvar_doce)
         self.cancelar.clicked.connect(self.cancelar_doce)

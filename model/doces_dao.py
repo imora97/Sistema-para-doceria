@@ -1,6 +1,4 @@
 
-# lista para armazenar os doces
-
 lista_doces = []
 
 def adicionar(novo_doce):
@@ -8,7 +6,7 @@ def adicionar(novo_doce):
     novo_doce.id = novo_id
     lista_doces.append(novo_doce)
 
-def pegar_doce(id):
+def pegar_doce(id):       ##### 'pegar doce' para quê???
     for doce in lista_doces:
         if doce.id == id:
             return doce

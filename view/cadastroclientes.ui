@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>778</width>
-    <height>512</height>
+    <width>741</width>
+    <height>510</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -25,7 +25,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Cadastro de doces</string>
+      <string>Cadastro de clientes</string>
      </property>
     </widget>
    </item>
@@ -45,7 +45,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Doce</string>
+      <string>Nome</string>
      </property>
     </widget>
    </item>
@@ -58,7 +58,7 @@
       </font>
      </property>
      <property name="placeholderText">
-      <string>Digite o nome do doce *</string>
+      <string>Digite o nome do cliente *</string>
      </property>
     </widget>
    </item>
@@ -71,12 +71,12 @@
       </font>
      </property>
      <property name="text">
-      <string>Peso</string>
+      <string>Telefone</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="peso">
+    <widget class="QLineEdit" name="nome_3">
      <property name="font">
       <font>
        <family>Segoe Print</family>
@@ -84,80 +84,7 @@
       </font>
      </property>
      <property name="placeholderText">
-      <string>Digite o peso *</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QLabel" name="label_3">
-     <property name="font">
-      <font>
-       <family>Segoe Print</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Tipo</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QComboBox" name="tipo">
-     <property name="font">
-      <font>
-       <family>Segoe Print</family>
-       <pointsize>10</pointsize>
-      </font>
-     </property>
-     <property name="editable">
-      <bool>false</bool>
-     </property>
-     <property name="duplicatesEnabled">
-      <bool>false</bool>
-     </property>
-     <property name="frame">
-      <bool>true</bool>
-     </property>
-     <item>
-      <property name="text">
-       <string/>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Doces</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Bolos</string>
-      </property>
-     </item>
-    </widget>
-   </item>
-   <item>
-    <widget class="QLabel" name="label_5">
-     <property name="font">
-      <font>
-       <family>Segoe Print</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Valor em R$</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QLineEdit" name="valor">
-     <property name="font">
-      <font>
-       <family>Segoe Print</family>
-       <pointsize>10</pointsize>
-      </font>
-     </property>
-     <property name="placeholderText">
-      <string>Digite o valor (ex. 0,00) *</string>
+      <string>Digite o telefone do cliente *</string>
      </property>
     </widget>
    </item>
