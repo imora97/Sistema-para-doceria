@@ -37,7 +37,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="doce_bolo">
+    <widget class="QPushButton" name="cad_db">
      <property name="font">
       <font>
        <family>Segoe Print</family>

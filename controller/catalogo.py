@@ -12,7 +12,7 @@ class CatalogoDoces(QWidget):
     
         self.carrega_dados()
 
-        self.doce_bolo.clicked.connect(self.abre_cad_doce)
+        self.cad_db.clicked.connect(self.abre_cad_doce)
 
         # configuração tabela - 
         """CONCLUIR"""
