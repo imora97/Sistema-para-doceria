@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>646</width>
-    <height>481</height>
+    <width>656</width>
+    <height>455</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -72,7 +72,7 @@
       </property>
      </widget>
     </item>
-    <item row="2" column="1" rowspan="2">
+    <item row="2" column="1" rowspan="2" colspan="2">
      <widget class="Line" name="line_2">
       <property name="orientation">
        <enum>Qt::Vertical</enum>
@@ -160,15 +160,15 @@
        </widget>
       </item>
       <item>
-       <widget class="QCommandLinkButton" name="commandLinkButton">
+       <widget class="QPushButton" name="cad_c">
         <property name="font">
          <font>
-          <family>Segoe UI</family>
+          <family>Segoe Print</family>
           <pointsize>12</pointsize>
          </font>
         </property>
         <property name="text">
-         <string>Link para whatsapp(sem mostrar o link)</string>
+         <string>Fazer login</string>
         </property>
        </widget>
       </item>
@@ -184,7 +184,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>646</width>
+     <width>656</width>
      <height>21</height>
     </rect>
    </property>

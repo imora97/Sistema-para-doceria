@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>741</width>
-    <height>510</height>
+    <width>656</width>
+    <height>466</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,19 +26,6 @@
      </property>
      <property name="text">
       <string>Cadastro de clientes</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QPushButton" name="cad_v">
-     <property name="font">
-      <font>
-       <family>Segoe Print</family>
-       <pointsize>10</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Cadastro de vendas</string>
      </property>
     </widget>
    </item>
@@ -89,7 +76,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="nome_3">
+    <widget class="QLineEdit" name="telefone">
      <property name="font">
       <font>
        <family>Segoe Print</family>

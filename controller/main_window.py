@@ -1,3 +1,4 @@
+from controller.cad_clientes import CadCliente
 from controller.catalogo import CatalogoDoces
 from controller.duvidas import Duvidas
 from controller.obs import Obs
@@ -16,6 +17,7 @@ class MainWindow(QMainWindow):
         self.duvida.clicked.connect(self.Duvidas)
         self.obs.clicked.connect(self.Obs)
         self.zap.clicked.connect(self.ChamaZap)
+        self.cad_c.clicked.connect(self.fazer_login)
 
     def CatalogoDoces(self):
         self.painel_principal.insertWidget(0, CatalogoDoces())
@@ -31,4 +33,8 @@ class MainWindow(QMainWindow):
 
     def ChamaZap(self):
         self.painel_principal.insertWidget(0, ChamaZap())
+        self.painel_principal.setCurrentIndex(0)
+
+    def fazer_login(self):
+        self.painel_principal.insertWidget(0, CadCliente())
         self.painel_principal.setCurrentIndex(0)

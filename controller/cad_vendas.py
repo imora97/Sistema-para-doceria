@@ -27,7 +27,7 @@ class CadVenda(QWidget):
         self.carrega_doce()
 
     def add_item_list(self):
-        if self.quantidade.text() == '' or self.valor_venda_cad.text() == '':
+        if self.quantidade.text() == '' or self.valor_venda_cad.text() == '' or self.tipo.currentText() == '' or self.item.currentText() == '':
             print('Dados obrigatórios *')
         else:
             # cria novo item
@@ -64,8 +64,14 @@ class CadVenda(QWidget):
 
     #def pega_cliente(self):
 
-    #def finalizar_cad(self):
-        #print(f"Cliente: {self.cliente_atual.nome}")
+    def finalizar_cad(self):
+        if self.item.currentText() == '' or self.quantidade.text() == '' or self.tipo.currentText() == '' or self.valor.text() == '':
+            print('Dados obrigatórios *')
+        else:
+            print(f"Cliente: {self.cliente_atual.nome}")
+            print
+            
+        self.close()
 
-    #def cancelar_cad(self):
-        #self.close()
+    def cancelar_cad(self):
+        self.close()
