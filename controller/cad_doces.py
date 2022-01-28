@@ -5,12 +5,11 @@ from qt_core import *
 
 class CadDoce(QWidget):
 
-    def __init__(self, janela_vendas):
+    def __init__(self, janela_doces):
         super().__init__()
         uic.loadUi('view/cadastrodoces.ui', self)
 
-        #self.janela_doces = janela_doces     #### essa janela tem utilidade??
-        self.janela_vendas = janela_vendas
+        self.janela_doces = janela_doces     #### essa janela tem utilidade??
 
         # lista
         self.lista_doces = None

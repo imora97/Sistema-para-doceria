@@ -5,9 +5,9 @@ import model.clientes_dao as clientes_dao
 
 class CadVenda(QWidget):
 
-    def __init__(self):
+    def __init__(self, janela_vendas):
         super().__init__()
-        uic.loadUi('cadastrovendas.ui', self)
+        uic.loadUi('view/cadastrovendas.ui', self)
         
         # listas
         self.lista_doces = None
@@ -17,6 +17,8 @@ class CadVenda(QWidget):
         # cliente e doce atual
         self.cliente_atual = None
         self.doce_atual = None
+
+        self.janela_vendas = janela_vendas
 
         # botões
         self.add_item.clicked.connect(self.add_item_list)
@@ -57,7 +59,7 @@ class CadVenda(QWidget):
         for d in self.lista_doces:
            self.doces_listWidget.addItem(d.nome)
 
-        self.pecas_listWidget.currentRowChanged.connect(self.pega_peca) ##### PARA LEMBRAR
+        #self.pecas_listWidget.currentRowChanged.connect(self.pega_peca) ##### PARA LEMBRAR
 
             #________________________________CONCLUIR
     #def pega_doce(self):
@@ -71,7 +73,7 @@ class CadVenda(QWidget):
             print(f"Cliente: {self.cliente_atual.nome}")
             print
             
-        self.close()
+            self.close()
 
     def cancelar_cad(self):
         self.close()
