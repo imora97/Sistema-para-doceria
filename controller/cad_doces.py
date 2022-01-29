@@ -9,7 +9,7 @@ class CadDoce(QWidget):
         super().__init__()
         uic.loadUi('view/cadastrodoces.ui', self)
 
-        self.janela_doces = janela_doces     #### essa janela tem utilidade??
+        self.janela_doces = janela_doces
 
         # lista
         self.lista_doces = None
@@ -22,10 +22,9 @@ class CadDoce(QWidget):
         if self.nome.text() == '' or self.peso.text() == '' or self.valor.text() == '' or self.tipo.currentText() == '':
             print('Dados obrigatórios *')
 
+            return None
         # atualiza tabela
         #self.janela_doces.carrega_dados()
-            return None
-        
         self.close()
 
     def carrega_dados(self):

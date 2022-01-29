@@ -1,4 +1,18 @@
 
+
+def createTableDoces(cursor):
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS "Doces" (
+        "Id"	INTEGER,
+        "Nome"	TEXT NOT NULL,
+        "Peso"	NUMERIC NOT NULL,
+        "Tipo"	TEXT NOT NULL,
+        "Valor"	NUMERIC NOT NULL,
+        PRIMARY KEY("Id")
+);
+    """)
+
+
 lista_doces = []
 
 def adicionar(novo_doce):
