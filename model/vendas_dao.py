@@ -1,3 +1,18 @@
+import model.database as database
+from model.vendas import Vendas
+
+def createTableVendas(cursor):
+
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS "Vendas" (
+        "Id"	INTEGER,
+        "Item"	TEXT NOT NULL,
+        "Quantidade"	NUMERIC NOT NULL,
+        "Tipo"	TEXT NOT NULL,
+        "Valor"	NUMERIC NOT NULL,
+        PRIMARY KEY("Id" AUTOINCREMENT)
+    );
+    """)
 
 
 lista_vendas = []

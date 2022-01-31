@@ -1,3 +1,18 @@
+import model.database as database
+from model.clientes import Clientes
+import model.
+
+def createTableClientes(cursor):
+
+    cursor.execute("""
+    CREATE TABLE "Clientes" (
+        "Id"	INTEGER,
+        "Nome"	TEXT NOT NULL,
+        "Telefone"	NUMERIC NOT NULL,
+        PRIMARY KEY("Id" AUTOINCREMENT)
+    );
+    """)
+
 
 lista_clientes = []
 

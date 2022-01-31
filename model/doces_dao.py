@@ -1,6 +1,8 @@
-
+import model.database as database
+from model.doces import Doces
 
 def createTableDoces(cursor):
+
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS "Doces" (
         "Id"	INTEGER,
@@ -9,7 +11,7 @@ def createTableDoces(cursor):
         "Tipo"	TEXT NOT NULL,
         "Valor"	NUMERIC NOT NULL,
         PRIMARY KEY("Id")
-);
+    );
     """)
 
 
