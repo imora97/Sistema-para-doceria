@@ -19,8 +19,9 @@ def insert(Clientes):
         sql = """INSERT INTO Clientes (nome, telefone, id) VALUES (?,?,?);"""
         cursor.execute(sql, [Clientes.nome, Clientes.telefone, Clientes.id])
         conn.commit()
-    except: # caso dê erro
+    except Exception as a: # caso dê erro
         print('ERRO!!!')
+        print(a)
     finally:
         conn.close()
 
@@ -31,8 +32,8 @@ def update(Clientes):
         sql = """UPDATE Clientes SET nome=?, telefone=? WHERE id=?;"""
         cursor.execute(sql, [Clientes.nome, Clientes.telefone, Clientes.id])
         conn.commit()
-    except: # caso dê erro
-        print('ERRO!!!')
+    except Exception as a: # caso dê erro
+        print(a)
     finally:
         conn.close()
 
@@ -43,8 +44,8 @@ def delete(id):
         sql = """DELETE FROM Clientes WHERE id=?;"""
         cursor.execute(sql, [id])
         conn.commit()
-    except: # caso dê erro
-        print('ERRO!!!')
+    except Exception as a: # caso dê erro
+        print(a)
     finally:
         conn.close()
 
@@ -62,8 +63,8 @@ def selectAll():
             telefone = r[2]
             c = Clientes(id, nome, telefone)
             lista.append(c)
-    except: # caso dê erro
-        print('ERRO!!!')
+    except Exception as a: # caso dê erro
+        print(a)
     finally:
         conn.close()
     return lista

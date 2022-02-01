@@ -21,8 +21,9 @@ def insert(Vendas):
         sql = """INSERT INTO Vendas (item, quantidade, tipo, valor, id) VALUES (?,?,?,?,?);"""
         cursor.execute(sql, [Vendas.item, Vendas.quantidade, Vendas.tipo, Vendas.valor, Vendas.id])
         conn.commit()
-    except: # caso dê erro
+    except Exception as a: # caso dê erro
         print('ERRO!!!')
+        print(a)
     finally:
         conn.close()
 
@@ -33,8 +34,8 @@ def update(Vendas):
         sql = """UPDATE Vendas SET item=?, quantidade=?, tipo=?, valor=? WHERE id=?;"""
         cursor.execute(sql, [Vendas.item, Vendas.quantidade, Vendas.tipo, Vendas.valor, Vendas.id])
         conn.commit()
-    except: # caso dê erro
-        print('ERRO!!!')
+    except Exception as a: # caso dê erro
+        print(a)
     finally:
         conn.close()
 
@@ -45,8 +46,8 @@ def delete(id):
         sql = """DELETE FROM Vendas WHERE id=?;"""
         cursor.execute(sql, [id])
         conn.commit()
-    except: # caso dê erro
-        print('ERRO!!!')
+    except Exception as a: # caso dê erro
+        print(a)
     finally:
         conn.close()
 
@@ -66,8 +67,8 @@ def selectAll():
             valor = [4]
             v = Vendas(id, item, quantidade, tipo, valor)
             lista.append(v)
-    except: # caso dê erro
-        print('ERRO!!!')
+    except Exception as a: # caso dê erro
+        print(a)
     finally:
         conn.close()
     return lista

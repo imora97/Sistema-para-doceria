@@ -10,7 +10,7 @@ def createTableDoces(cursor):
         "Peso"	NUMERIC NOT NULL,
         "Tipo"	TEXT NOT NULL,
         "Valor"	NUMERIC NOT NULL,
-        PRIMARY KEY("Id")
+        PRIMARY KEY("Id" AUTOINCREMENT)
     );
     """)
 
@@ -21,8 +21,9 @@ def insert(Doces):
         sql = """INSERT INTO Doces (nome, peso, tipo, valor, id) VALUES (?,?,?,?,?);"""
         cursor.execute(sql, [Doces.nome, Doces.peso, Doces.tipo, Doces.valor, Doces.id])
         conn.commit()
-    except: # caso dê erro
+    except Exception as a: # caso dê erro
         print('ERRO!!!')
+        print(a)
     finally:
         conn.close()
 
@@ -33,8 +34,8 @@ def update(Doces):
         sql = """UPDATE Doces SET nome=?, peso=?, tipo=?, valor=? WHERE id=?;"""
         cursor.execute(sql, [Doces.nome, Doces.peso, Doces.tipo, Doces.valor, Doces.id])
         conn.commit()
-    except: # caso dê erro
-        print('ERRO!!!')
+    except Exception as a: # caso dê erro
+        print(a)
     finally:
         conn.close()
 
@@ -45,8 +46,8 @@ def delete(id):
         sql = """DELETE FROM Doces WHERE id=?;"""
         cursor.execute(sql, [id])
         conn.commit()
-    except: # caso dê erro
-        print('ERRO!!!')
+    except Exception as a: # caso dê erro
+        print(a)
     finally:
         conn.close()
 
@@ -66,8 +67,8 @@ def selectAll():
             valor = [4]
             d = Doces(id, nome, peso, tipo, valor)
             lista.append(d)
-    except: # caso dê erro
-        print('ERRO!!!')
+    except Exception as a: # caso dê erro
+        print(a)
     finally:
         conn.close()
     return lista
