@@ -14,8 +14,66 @@ def createTableDoces(cursor):
     );
     """)
 
+def insert(Doces):
+    try: # tenta executar o código
+        conn = database.connect()
+        cursor = conn.cursor()
+        sql = """INSERT INTO Doces (nome, peso, tipo, valor, id) VALUES (?,?,?,?,?);"""
+        cursor.execute(sql, [Doces.nome, Doces.peso, Doces.tipo, Doces.valor, Doces.id])
+        conn.commit()
+    except: # caso dê erro
+        print('ERRO!!!')
+    finally:
+        conn.close()
 
-lista_doces = []
+def update(Doces):
+    try: # tenta executar o código
+        conn = database.connect()
+        cursor = conn.cursor()
+        sql = """UPDATE Doces SET nome=?, peso=?, tipo=?, valor=? WHERE id=?;"""
+        cursor.execute(sql, [Doces.nome, Doces.peso, Doces.tipo, Doces.valor, Doces.id])
+        conn.commit()
+    except: # caso dê erro
+        print('ERRO!!!')
+    finally:
+        conn.close()
+
+def delete(id):
+    try: # tenta executar o código
+        conn = database.connect()
+        cursor = conn.cursor()
+        sql = """DELETE FROM Doces WHERE id=?;"""
+        cursor.execute(sql, [id])
+        conn.commit()
+    except: # caso dê erro
+        print('ERRO!!!')
+    finally:
+        conn.close()
+
+def selectAll():
+    lista = []
+    try: # tenta executar o código
+        conn = database.connect()
+        cursor = conn.cursor()
+        sql = """SELECT * FROM Doces ORDER BY upper(nome);"""
+        cursor.execute(sql)
+        result = cursor.fetchall() # retorna uma lista clientes
+        for r in result:
+            id = r[0]
+            nome = r[1]
+            peso = r[2]
+            tipo = r[3]
+            valor = [4]
+            d = Doces(id, nome, peso, tipo, valor)
+            lista.append(d)
+    except: # caso dê erro
+        print('ERRO!!!')
+    finally:
+        conn.close()
+    return lista
+
+
+"""lista_doces = []
 
 def adicionar(novo_doce):
     novo_id = len(lista_doces)
@@ -36,4 +94,4 @@ def editar(doce):
 def excluir_doce(id):
     for doce in lista_doces:
         if doce.id == id:
-            lista_doces.remove(doce)
+            lista_doces.remove(doce)"""

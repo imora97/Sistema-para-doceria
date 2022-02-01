@@ -14,8 +14,66 @@ def createTableVendas(cursor):
     );
     """)
 
+def insert(Vendas):
+    try: # tenta executar o código
+        conn = database.connect()
+        cursor = conn.cursor()
+        sql = """INSERT INTO Vendas (item, quantidade, tipo, valor, id) VALUES (?,?,?,?,?);"""
+        cursor.execute(sql, [Vendas.item, Vendas.quantidade, Vendas.tipo, Vendas.valor, Vendas.id])
+        conn.commit()
+    except: # caso dê erro
+        print('ERRO!!!')
+    finally:
+        conn.close()
 
-lista_vendas = []
+def update(Vendas):
+    try: # tenta executar o código
+        conn = database.connect()
+        cursor = conn.cursor()
+        sql = """UPDATE Vendas SET item=?, quantidade=?, tipo=?, valor=? WHERE id=?;"""
+        cursor.execute(sql, [Vendas.item, Vendas.quantidade, Vendas.tipo, Vendas.valor, Vendas.id])
+        conn.commit()
+    except: # caso dê erro
+        print('ERRO!!!')
+    finally:
+        conn.close()
+
+def delete(id):
+    try: # tenta executar o código
+        conn = database.connect()
+        cursor = conn.cursor()
+        sql = """DELETE FROM Vendas WHERE id=?;"""
+        cursor.execute(sql, [id])
+        conn.commit()
+    except: # caso dê erro
+        print('ERRO!!!')
+    finally:
+        conn.close()
+
+def selectAll():
+    lista = []
+    try: # tenta executar o código
+        conn = database.connect()
+        cursor = conn.cursor()
+        sql = """SELECT * FROM Vendas ORDER BY upper(nome);"""
+        cursor.execute(sql)
+        result = cursor.fetchall() # retorna uma lista clientes
+        for r in result:
+            id = r[0]
+            item = r[1]
+            quantidade = r[2]
+            tipo = r[3]
+            valor = [4]
+            v = Vendas(id, item, quantidade, tipo, valor)
+            lista.append(v)
+    except: # caso dê erro
+        print('ERRO!!!')
+    finally:
+        conn.close()
+    return lista
+
+
+"""lista_vendas = []
 
 def adicionar(nova_venda):
     novo_id = len(lista_vendas)
@@ -30,4 +88,4 @@ def editar(venda):
 def excluir_venda(id):
     for venda in lista_vendas:
         if venda.id == id:
-            lista_vendas.remove(venda)
+            lista_vendas.remove(venda)"""
