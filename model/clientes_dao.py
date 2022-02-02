@@ -1,5 +1,6 @@
 import model.database as database
-from model.clientes import Clientes
+import model.clientes_dao as clientes
+
 
 def createTableClientes(cursor):
 
@@ -12,12 +13,12 @@ def createTableClientes(cursor):
     );
     """)
 
-def insert(Clientes):
+def insert(clientes):
     try: # tenta executar o código
         conn = database.connect()
         cursor = conn.cursor()
         sql = """INSERT INTO Clientes (nome, telefone, id) VALUES (?,?,?);"""
-        cursor.execute(sql, [Clientes.nome, Clientes.telefone, Clientes.id])
+        cursor.execute(sql, [clientes.nome, clientes.telefone, clientes.id])
         conn.commit()
     except Exception as a: # caso dê erro
         print('ERRO!!!')
@@ -25,12 +26,12 @@ def insert(Clientes):
     finally:
         conn.close()
 
-def update(Clientes):
+def update(clientes):
     try: # tenta executar o código
         conn = database.connect()
         cursor = conn.cursor()
         sql = """UPDATE Clientes SET nome=?, telefone=? WHERE id=?;"""
-        cursor.execute(sql, [Clientes.nome, Clientes.telefone, Clientes.id])
+        cursor.execute(sql, [clientes.nome, clientes.telefone, clientes.id])
         conn.commit()
     except Exception as a: # caso dê erro
         print(a)
@@ -61,7 +62,7 @@ def selectAll():
             id = r[0]
             nome = r[1]
             telefone = r[2]
-            c = Clientes(id, nome, telefone)
+            c = clientes(id, nome, telefone)
             lista.append(c)
     except Exception as a: # caso dê erro
         print(a)

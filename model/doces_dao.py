@@ -1,5 +1,6 @@
 import model.database as database
-from model.doces import Doces
+import model.doces as doces
+
 
 def createTableDoces(cursor):
 
@@ -14,12 +15,12 @@ def createTableDoces(cursor):
     );
     """)
 
-def insert(Doces):
+def insert(doces):
     try: # tenta executar o código
         conn = database.connect()
         cursor = conn.cursor()
         sql = """INSERT INTO Doces (nome, peso, tipo, valor, id) VALUES (?,?,?,?,?);"""
-        cursor.execute(sql, [Doces.nome, Doces.peso, Doces.tipo, Doces.valor, Doces.id])
+        cursor.execute(sql, [doces.nome, doces.peso, doces.tipo, doces.valor, doces.id])
         conn.commit()
     except Exception as a: # caso dê erro
         print('ERRO!!!')
@@ -27,12 +28,12 @@ def insert(Doces):
     finally:
         conn.close()
 
-def update(Doces):
+def update(doces):
     try: # tenta executar o código
         conn = database.connect()
         cursor = conn.cursor()
         sql = """UPDATE Doces SET nome=?, peso=?, tipo=?, valor=? WHERE id=?;"""
-        cursor.execute(sql, [Doces.nome, Doces.peso, Doces.tipo, Doces.valor, Doces.id])
+        cursor.execute(sql, [doces.nome, doces.peso, doces.tipo, doces.valor, doces.id])
         conn.commit()
     except Exception as a: # caso dê erro
         print(a)
@@ -65,7 +66,7 @@ def selectAll():
             peso = r[2]
             tipo = r[3]
             valor = [4]
-            d = Doces(id, nome, peso, tipo, valor)
+            d = doces(id, nome, peso, tipo, valor)
             lista.append(d)
     except Exception as a: # caso dê erro
         print(a)

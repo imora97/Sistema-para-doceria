@@ -1,7 +1,7 @@
 import sqlite3
-from model.doces_dao import createTableDoces
-from model.clientes_dao import createTableClientes
-from model.vendas_dao import createTableVendas
+import model.clientes_dao as clientes
+import model.doces_dao as doces
+import model.vendas_dao as vendas
 
 def connect():
     conn = sqlite3.connect('database/sistemadoceria.sqlite')
@@ -10,8 +10,8 @@ def connect():
 def createDB():
     conn = connect()
     cursor = conn.cursor()
-    createTableDoces(cursor)
-    createTableClientes(cursor)
-    createTableVendas(cursor)
+    clientes.createTableClientes(cursor)
+    doces.createTableDoces(cursor)
+    vendas.createTableVendas(cursor)
     conn.commit()
     conn.close()

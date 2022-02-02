@@ -1,5 +1,6 @@
 import model.database as database
-from model.vendas import Vendas
+import model.vendas as vendas
+
 
 def createTableVendas(cursor):
 
@@ -14,12 +15,12 @@ def createTableVendas(cursor):
     );
     """)
 
-def insert(Vendas):
+def insert(vendas):
     try: # tenta executar o código
         conn = database.connect()
         cursor = conn.cursor()
         sql = """INSERT INTO Vendas (item, quantidade, tipo, valor, id) VALUES (?,?,?,?,?);"""
-        cursor.execute(sql, [Vendas.item, Vendas.quantidade, Vendas.tipo, Vendas.valor, Vendas.id])
+        cursor.execute(sql, [vendas.item, vendas.quantidade, vendas.tipo, vendas.valor, vendas.id])
         conn.commit()
     except Exception as a: # caso dê erro
         print('ERRO!!!')
@@ -27,12 +28,12 @@ def insert(Vendas):
     finally:
         conn.close()
 
-def update(Vendas):
+def update(vendas):
     try: # tenta executar o código
         conn = database.connect()
         cursor = conn.cursor()
         sql = """UPDATE Vendas SET item=?, quantidade=?, tipo=?, valor=? WHERE id=?;"""
-        cursor.execute(sql, [Vendas.item, Vendas.quantidade, Vendas.tipo, Vendas.valor, Vendas.id])
+        cursor.execute(sql, [vendas.item, vendas.quantidade, vendas.tipo, vendas.valor, vendas.id])
         conn.commit()
     except Exception as a: # caso dê erro
         print(a)
@@ -65,7 +66,7 @@ def selectAll():
             quantidade = r[2]
             tipo = r[3]
             valor = [4]
-            v = Vendas(id, item, quantidade, tipo, valor)
+            v = vendas(id, item, quantidade, tipo, valor)
             lista.append(v)
     except Exception as a: # caso dê erro
         print(a)
