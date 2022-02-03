@@ -45,7 +45,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Nome</string>
+      <string>Nome *</string>
      </property>
     </widget>
    </item>
@@ -58,7 +58,7 @@
       </font>
      </property>
      <property name="placeholderText">
-      <string>Digite o nome do cliente *</string>
+      <string>Digite o nome do cliente</string>
      </property>
     </widget>
    </item>
@@ -71,7 +71,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Telefone</string>
+      <string>Telefone *</string>
      </property>
     </widget>
    </item>
@@ -84,7 +84,27 @@
       </font>
      </property>
      <property name="placeholderText">
-      <string>Digite o telefone do cliente *</string>
+      <string>Digite o telefone do cliente</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string>Campos marcados com * são obrigatórios</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="limpar">
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Limpar</string>
      </property>
     </widget>
    </item>

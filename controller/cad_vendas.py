@@ -24,6 +24,7 @@ class CadVenda(QWidget):
         self.add_item.clicked.connect(self.add_item_list)
         self.finalizecad.clicked.connect(self.finalizar_cad)
         self.cancelecad.clicked.connect(self.cancelar_cad)
+        self.limpar.clicked.connect(self.limpa)
 
         self.carrega_cliente()
         self.carrega_doce()
@@ -77,3 +78,9 @@ class CadVenda(QWidget):
 
     def cancelar_cad(self):
         self.close()
+
+    def limpa(self):
+        self.item.clear()
+        self.quantidade.clear()
+        self.tipo.clear()
+        self.valor_venda_cad.clear()

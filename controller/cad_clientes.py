@@ -13,6 +13,7 @@ class CadCliente(QWidget):
 
         self.finalizar.clicked.connect(self.salvar_cliente)
         self.cancelar.clicked.connect(self.cancelar_cliente)
+        self.limpar.clicked.connect(self.limpa)
     
     def salvar_cliente(self):
         if self.nome.text() == '' or self.telefone.text() == '':
@@ -34,3 +35,7 @@ class CadCliente(QWidget):
 
     def cancelar_cliente(self):
         self.close()
+
+    def limpa(self):
+        self.nome.clear()
+        self.telefone.clear()

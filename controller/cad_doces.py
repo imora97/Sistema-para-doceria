@@ -17,6 +17,7 @@ class CadDoce(QWidget):
         self.finalizar.clicked.connect(self.salvar_doce)
         self.cancelar.clicked.connect(self.cancelar_doce)
         self.cad_v.clicked.connect(self.abre_cad_venda)
+        self.limpar.clicked.connect(self.limpa)
 
     def salvar_doce(self):
         if self.nome.text() == '' or self.peso.text() == '' or self.valor.text() == '' or self.tipo.currentText() == '':
@@ -43,3 +44,10 @@ class CadDoce(QWidget):
 
     def cancelar_doce(self):
         self.close()
+
+    def limpa(self):
+        self.nome.clear()
+        self.peso.clear()
+        self.tipo.clear()
+        self.valor.clear()
+

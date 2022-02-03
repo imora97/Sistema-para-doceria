@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>617</width>
-    <height>543</height>
+    <height>592</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -45,7 +45,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Item</string>
+      <string>Item *</string>
      </property>
     </widget>
    </item>
@@ -82,7 +82,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Adicionar item</string>
+      <string>Adicionar item *</string>
      </property>
     </widget>
    </item>
@@ -95,7 +95,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Quantidade</string>
+      <string>Quantidade *</string>
      </property>
     </widget>
    </item>
@@ -108,7 +108,7 @@
       </font>
      </property>
      <property name="placeholderText">
-      <string>Digite a quantidade *</string>
+      <string>Digite a quantidade</string>
      </property>
     </widget>
    </item>
@@ -121,7 +121,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Tipo</string>
+      <string>Tipo *</string>
      </property>
     </widget>
    </item>
@@ -168,7 +168,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Valor total da venda em R$</string>
+      <string>Valor total da venda em R$ *</string>
      </property>
     </widget>
    </item>
@@ -181,7 +181,27 @@
       </font>
      </property>
      <property name="placeholderText">
-      <string>Digite o valor (ex. 0,00) *</string>
+      <string>Digite o valor (ex. 0,00)</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string>Campos marcados com * são obrigatórios</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="limpar">
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Limpar</string>
      </property>
     </widget>
    </item>

@@ -9,13 +9,23 @@ class CatalogoDoces(QWidget):
     def __init__(self):
         super().__init__()
         uic.loadUi('view/catalogo.ui', self)
+
+        # lista
+        self.lista_doces = None
     
         self.carrega_dados()
 
         self.cad_db.clicked.connect(self.abre_cad_doce)
 
+        # barra de pesquisa
+        self.pesquisa.LineEdit.connect(self.pesquisar)
+
         # configuração tabela - 
         """CONCLUIR"""
+
+    def pesquisar(self, texto):
+        print(texto)
+        print(self.tabela.currentIndex())
 
     def abre_cad_doce(self):
         # abre a janela de cadastro
