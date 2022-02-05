@@ -2,6 +2,7 @@ from model.doces import Doces
 from qt_core import*
 import model.doces_dao as doces_dao
 from controller.cad_doces import CadDoce
+import model.database as db
 
 
 class CatalogoDoces(QWidget):
@@ -9,23 +10,13 @@ class CatalogoDoces(QWidget):
     def __init__(self):
         super().__init__()
         uic.loadUi('view/catalogo.ui', self)
-
-        # lista
-        self.lista_doces = None
     
         self.carrega_dados()
 
         self.cad_db.clicked.connect(self.abre_cad_doce)
 
-        # barra de pesquisa
-        self.pesquisa.LineEdit.connect(self.pesquisar)
-
         # configuração tabela - 
         """CONCLUIR"""
-
-    def pesquisar(self, texto):
-        print(texto)
-        print(self.tabela.currentIndex())
 
     def abre_cad_doce(self):
         # abre a janela de cadastro
@@ -33,9 +24,9 @@ class CatalogoDoces(QWidget):
         self.doce_window.show()
 
     def carrega_dados(self):
-        lista = doces_dao.lista_doces
+        self.lista = doces_dao.selectAll()
         self.tabela.setRowCount(0)
-        for l in lista:
+        for l in self.lista:
             self.add_linha(l)
 
     def add_linha(self, l):

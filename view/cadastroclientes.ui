@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>656</width>
-    <height>466</height>
+    <height>504</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -25,7 +25,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Cadastro de clientes</string>
+      <string>Cadastro de Clientes</string>
      </property>
     </widget>
    </item>
@@ -132,6 +132,59 @@
      <property name="text">
       <string>Finalizar</string>
      </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="excluir_button">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Excluir Selecionados</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="tabela">
+     <column>
+      <property name="text">
+       <string>ID</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe Print</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Nome</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe Print</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Telefone</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe Print</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </column>
     </widget>
    </item>
   </layout>

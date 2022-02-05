@@ -89,6 +89,13 @@
     </widget>
    </item>
    <item>
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string>Campos marcados com * são obrigatórios</string>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QPushButton" name="cancelar">
      <property name="font">
       <font>

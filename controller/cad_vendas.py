@@ -48,7 +48,7 @@ class CadVenda(QWidget):
         # somar valores da multiplicaçao entre a quantidade itens * valor do doce
 
     def carrega_cliente(self):
-        self.lista_clientes = clientes_dao.lista_clientes
+        self.lista_clientes = clientes_dao.selectAll()
         lista = []
         for c in self.lista_clientes:
             lista.append(c.nome)
@@ -56,7 +56,7 @@ class CadVenda(QWidget):
         # pega o INDEX do cliente selecionado
 
     def carrega_doce(self):
-        self.lista_doces = doces_dao.lista_doces
+        self.lista_doces = doces_dao.selectAll()
         for d in self.lista_doces:
            self.doces_listWidget.addItem(d.nome)
 

@@ -63,6 +63,19 @@
     </widget>
    </item>
    <item>
+    <widget class="QPushButton" name="pesquisar_button">
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Pesquisar</string>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QTableWidget" name="tabela">
      <column>
       <property name="text">

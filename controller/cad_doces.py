@@ -29,9 +29,9 @@ class CadDoce(QWidget):
         self.close()
 
     def carrega_dados(self):
-        cadlista = doces_dao.lista_doces
+        self.cadlista = doces_dao.selectAll()
         self.tabela.setRowCount(0)
-        for db in cadlista:
+        for db in self.cadlista:
             self.add_linha(db)
 
     def add_linha(self, db):
@@ -50,4 +50,3 @@ class CadDoce(QWidget):
         self.peso.clear()
         self.tipo.clear()
         self.valor.clear()
-

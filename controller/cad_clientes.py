@@ -8,6 +8,9 @@ class CadCliente(QWidget):
         super().__init__()
         uic.loadUi('view/cadastroclientes.ui', self)
 
+        # insere tabela no layout
+        #self.table = TabelaCliente(self)
+
         # lista
         self.lista_clientes = None
 
@@ -24,9 +27,9 @@ class CadCliente(QWidget):
         self.close()
         
     def carrega_dados(self):
-        cc = clientes_dao.lista_clientes
+        self.cc = clientes_dao.selectAll()
         self.tabela.setRowCount(0)
-        for cadc in cc:
+        for cadc in self.cc:
             self.add_linha(cadc)
 
     def add_linha(self, cadc):

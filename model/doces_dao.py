@@ -15,6 +15,24 @@ def createTableDoces(cursor):
     );
     """)
 
+def getCatalogo(pesquisa = ''):
+    conn = database.connect_database()
+    cursor = conn.cursor()
+    pesquisa = ""+pesquisa+"%"
+    cursor.execute("SELECT * FROM Catalogo c WHERE c.nome LIKE ? ORDER BY c.nome;", [pesquisa])
+    lista_doces = []
+
+    for cd in cursor.fetchall():
+        id = cd[0]
+        nome = cd[1]
+        peso = cd[2]
+        tipo = cd[3]
+        valor = cd[4]
+        novocd = doces(id, nome, peso, tipo, valor)
+        lista_doces.append(novocd)
+    conn.close()
+    return lista_doces
+
 def insert(doces):
     try: # tenta executar o código
         conn = database.connect()
@@ -59,7 +77,7 @@ def selectAll():
         cursor = conn.cursor()
         sql = """SELECT * FROM Doces ORDER BY upper(nome);"""
         cursor.execute(sql)
-        result = cursor.fetchall() # retorna uma lista clientes
+        result = cursor.fetchall() # retorna uma lista
         for r in result:
             id = r[0]
             nome = r[1]
