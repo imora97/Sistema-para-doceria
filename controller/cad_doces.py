@@ -30,6 +30,7 @@ class CadDoce(QWidget):
 
     def carrega_dados(self):
         self.cadlista = doces_dao.selectAll()
+        self.limpa()
         self.tabela.setRowCount(0)
         for db in self.cadlista:
             self.add_linha(db)
@@ -37,6 +38,18 @@ class CadDoce(QWidget):
     def add_linha(self, db):
         rowCount = self.tabela.rowCount()
         self.tabela.insertRow(rowCount)
+
+        id = QTableWidgetItem(str(db.id))
+        nome = QTableWidgetItem(db.nome)
+        peso = QTableWidgetItem(db.peso)
+        tipo = QTableWidgetItem(db.tipo)
+        valor = QTableWidgetItem(db.valor)
+
+        self.tabela.setItem(rowCount, 0, id)
+        self.tabela.setItem(rowCount, 1, nome)
+        self.tabela.setItem(rowCount, 2, peso)
+        self.tabela.setItem(rowCount, 3, tipo)
+        self.tabela.setItem(rowCount, 4, valor)
 
     def abre_cad_venda(self):
         self.venda_window = CadVenda(self)

@@ -8,9 +8,9 @@ def createTableDoces(cursor):
     CREATE TABLE IF NOT EXISTS "Doces" (
         "Id"	INTEGER,
         "Nome"	TEXT NOT NULL,
-        "Peso"	NUMERIC NOT NULL,
+        "Peso"	TEXT NOT NULL,
         "Tipo"	TEXT NOT NULL,
-        "Valor"	NUMERIC NOT NULL,
+        "Valor"	REAL NOT NULL,
         PRIMARY KEY("Id" AUTOINCREMENT)
     );
     """)

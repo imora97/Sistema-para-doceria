@@ -1,3 +1,4 @@
+from operator import index
 from qt_core import *
 import model.doces_dao as doces_dao
 import model.clientes_dao as clientes_dao
@@ -42,8 +43,7 @@ class CadVenda(QWidget):
 
     def atualiza_dados_cad_venda(self):
         pass
-        # atualiza a quantidade de itens
-        # mostra o tamanho da lista itens
+        # atualiza a quantidade de itens e mostra o tamanho da lista itens
         # atualiza total pago/a pagar
         # somar valores da multiplicaçao entre a quantidade itens * valor do doce
 
@@ -52,20 +52,25 @@ class CadVenda(QWidget):
         lista = []
         for c in self.lista_clientes:
             lista.append(c.nome)
-            #________________________________CONCLUIR
-        # pega o INDEX do cliente selecionado
+
+            # lista de nomes dos clientes
+        self.clientes_comboBox.addItems(lista)
+        self.clientes_comboBox.currentIndexChanged.connect(self.pega_cliente)
 
     def carrega_doce(self):
         self.lista_doces = doces_dao.selectAll()
         for d in self.lista_doces:
            self.doces_listWidget.addItem(d.nome)
 
-        #self.pecas_listWidget.currentRowChanged.connect(self.pega_peca) ##### PARA LEMBRAR
+        self.doces_listWidget.currentRowChanged.connect(self.pega_doce)
 
-            #________________________________CONCLUIR
-    #def pega_doce(self):
+    def pega_cliente(self, index):
+        self.cliente_atual = self.lista_clientes[index]
+        self.label_id.setText(f' {self.cliente_atual.id} ')
 
-    #def pega_cliente(self):
+    def pega_doce(self, index):
+        self.doce_atual = self.lista_doces[index]
+        self.valor.setText(str(self.doce_atual.valor))
 
     def finalizar_cad(self):
         if self.item.currentText() == '' or self.quantidade.text() == '' or self.tipo.currentText() == '' or self.valor.text() == '':

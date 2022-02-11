@@ -28,6 +28,7 @@ class CadCliente(QWidget):
         
     def carrega_dados(self):
         self.cc = clientes_dao.selectAll()
+        self.limpa()
         self.tabela.setRowCount(0)
         for cadc in self.cc:
             self.add_linha(cadc)
@@ -35,6 +36,14 @@ class CadCliente(QWidget):
     def add_linha(self, cadc):
         rowCount = self.tabela.rowCount()
         self.tabela.insertRow(rowCount)
+
+        id = QTableWidgetItem(str(cadc.id))
+        nome = QTableWidgetItem(cadc.nome)
+        telefone = QTableWidgetItem(cadc.telefone)
+
+        self.tabela.setItem(rowCount, 0, id)
+        self.tabela.setItem(rowCount, 1, nome)
+        self.tabela.setItem(rowCount, 2, telefone)
 
     def cancelar_cliente(self):
         self.close()
