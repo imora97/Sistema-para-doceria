@@ -10,13 +10,16 @@ class CadCliente(QWidget):
 
         # insere tabela no layout
         #self.table = TabelaCliente(self)
+        
+        self.cliente_atual = None
 
         # lista
         self.lista_clientes = None
 
         self.finalizar.clicked.connect(self.salvar_cliente)
         self.cancelar.clicked.connect(self.cancelar_cliente)
-        self.limpar.clicked.connect(self.limpa)
+        self.limpa.clicked.connect(self.limpar)
+        self.excluir_button.clicked.connect(self.excluir)
     
     def salvar_cliente(self):
         if self.nome.text() == '' or self.telefone.text() == '':
@@ -48,6 +51,13 @@ class CadCliente(QWidget):
     def cancelar_cliente(self):
         self.close()
 
-    def limpa(self):
+    def excluir(self):
+        if self.cliente_atual != None:
+            clientes_dao.delete(self.cliente_atual.id)
+            self.carrega_dados()
+            
+            ##### COLOCAR COMANDO DE CAIXA DE SELEÇÃO
+
+    def limpar(self):
         self.nome.clear()
         self.telefone.clear()

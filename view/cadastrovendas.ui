@@ -193,7 +193,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="limpar">
+    <widget class="QPushButton" name="limpa">
      <property name="font">
       <font>
        <family>Segoe Print</family>

@@ -10,6 +10,7 @@ class CadDoce(QWidget):
         uic.loadUi('view/cadastrodoces.ui', self)
 
         self.janela_doces = janela_doces
+        self.doce_atual = None
 
         # lista
         self.lista_doces = None
@@ -17,7 +18,8 @@ class CadDoce(QWidget):
         self.finalizar.clicked.connect(self.salvar_doce)
         self.cancelar.clicked.connect(self.cancelar_doce)
         self.cad_v.clicked.connect(self.abre_cad_venda)
-        self.limpar.clicked.connect(self.limpa)
+        self.limpa.clicked.connect(self.limpar)
+        self.excluir_button.clicked.connect(self.excluir)
 
     def salvar_doce(self):
         if self.nome.text() == '' or self.peso.text() == '' or self.valor.text() == '' or self.tipo.currentText() == '':
@@ -58,7 +60,14 @@ class CadDoce(QWidget):
     def cancelar_doce(self):
         self.close()
 
-    def limpa(self):
+    def excluir(self):
+        if self.doce_atual != None:
+            doces_dao.delete(self.doce_atual.id)
+            self.carrega_dados()
+
+            ##### COLOCAR COMANDO DE CAIXA DE SELEÇÃO
+
+    def limpar(self):
         self.nome.clear()
         self.peso.clear()
         self.tipo.clear()

@@ -25,7 +25,8 @@ class CadVenda(QWidget):
         self.add_item.clicked.connect(self.add_item_list)
         self.finalizecad.clicked.connect(self.finalizar_cad)
         self.cancelecad.clicked.connect(self.cancelar_cad)
-        self.limpar.clicked.connect(self.limpa)
+        self.limpa.clicked.connect(self.limpar)
+        self.excluir_button.clicked.connect(self.excluir)
 
         self.carrega_cliente()
         self.carrega_doce()
@@ -53,16 +54,14 @@ class CadVenda(QWidget):
         for c in self.lista_clientes:
             lista.append(c.nome)
 
-            # lista de nomes dos clientes
-        self.clientes_comboBox.addItems(lista)
-        self.clientes_comboBox.currentIndexChanged.connect(self.pega_cliente)
-
+            # lista de nomes dos clientes ### CONCLUIR
+        
     def carrega_doce(self):
         self.lista_doces = doces_dao.selectAll()
         for d in self.lista_doces:
            self.doces_listWidget.addItem(d.nome)
 
-        self.doces_listWidget.currentRowChanged.connect(self.pega_doce)
+        #self.doces_listWidget.currentRowChanged.connect(self.pega_doce)
 
     def pega_cliente(self, index):
         self.cliente_atual = self.lista_clientes[index]
@@ -84,7 +83,15 @@ class CadVenda(QWidget):
     def cancelar_cad(self):
         self.close()
 
-    def limpa(self):
+    def excluir(self):
+        if self.cliente_atual or self.doce_atual != None:
+            clientes_dao.delete(self.cliente_atual.id)
+            doces_dao.delete(self.doce_atual.id)
+            self.carrega_dados()
+
+            ##### COLOCAR COMANDO DE CAIXA DE SELEÇÃO
+
+    def limpar(self):
         self.item.clear()
         self.quantidade.clear()
         self.tipo.clear()
