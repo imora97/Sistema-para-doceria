@@ -23,7 +23,7 @@ class CadDoce(QWidget):
 
     def salvar_doce(self):
         if self.nome.text() == '' or self.peso.text() == '' or self.valor.text() == '' or self.tipo.currentText() == '':
-            print('Dados obrigatórios *')
+            print('\033[7;35;44mDados obrigatórios *\033[m')
 
             return None
         # atualiza tabela

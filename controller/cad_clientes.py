@@ -23,7 +23,7 @@ class CadCliente(QWidget):
     
     def salvar_cliente(self):
         if self.nome.text() == '' or self.telefone.text() == '':
-            print('Dados obrigatórios *')
+            print('\033[7;35;44mDados obrigatórios *\033[m') #código de cor da fonte
 
             return None
             

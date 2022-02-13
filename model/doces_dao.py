@@ -41,7 +41,7 @@ def insert(doces):
         cursor.execute(sql, [doces.nome, doces.peso, doces.tipo, doces.valor, doces.id])
         conn.commit()
     except Exception as a: # caso dê erro
-        print('ERRO!!!')
+        print('\033[1;34;41mERRO!!!\033[m')
         print(a)
     finally:
         conn.close()

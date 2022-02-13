@@ -24,7 +24,7 @@ def insert(vendas):
         cursor.execute(sql, [vendas.item, vendas.quantidade, vendas.tipo, vendas.valor, vendas.id])
         conn.commit()
     except Exception as a: # caso dê erro
-        print('ERRO!!!')
+        print('\033[1;34;41mERRO!!!\033[m')
         print(a)
     finally:
         conn.close()

@@ -33,7 +33,7 @@ class CadVenda(QWidget):
 
     def add_item_list(self):
         if self.quantidade.text() == '' or self.valor_venda_cad.text() == '' or self.tipo.currentText() == '' or self.item.currentText() == '':
-            print('Dados obrigatórios *')
+            print('\033[7;35;44mDados obrigatórios *\033[m')
         else:
             # cria novo item
             item = {'quantidade': self.quantidade.text(),
