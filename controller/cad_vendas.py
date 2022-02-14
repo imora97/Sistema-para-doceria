@@ -1,4 +1,3 @@
-from operator import index
 from qt_core import *
 import model.doces_dao as doces_dao
 import model.clientes_dao as clientes_dao
@@ -23,7 +22,7 @@ class CadVenda(QWidget):
 
         # botões
         self.add_item.clicked.connect(self.add_item_list)
-        self.finalizecad.clicked.connect(self.finalizar_cad)
+        self.salvar.clicked.connect(self.salvar_cad)
         self.cancelecad.clicked.connect(self.cancelar_cad)
         self.limpa.clicked.connect(self.limpar)
         self.excluir_button.clicked.connect(self.excluir)
@@ -31,9 +30,18 @@ class CadVenda(QWidget):
         self.carrega_cliente()
         self.carrega_doce()
 
+    def salvar_cad(self):
+        if self.item.currentText() == '' or self.quantidade.text() == '' or self.tipo.currentText() == '' or self.valor.text() == '':
+            print('\033[7;35;44mDados obrigatórios *\033[m')
+        else:
+            print(f"\033[1;36mCliente: {self.cliente_atual.nome}\033[m")
+            
+            self.close()
+
     def add_item_list(self):
         if self.quantidade.text() == '' or self.valor_venda_cad.text() == '' or self.tipo.currentText() == '' or self.item.currentText() == '':
             print('\033[7;35;44mDados obrigatórios *\033[m')
+
         else:
             # cria novo item
             item = {'quantidade': self.quantidade.text(),
@@ -70,15 +78,6 @@ class CadVenda(QWidget):
     def pega_doce(self, index):
         self.doce_atual = self.lista_doces[index]
         self.valor.setText(str(self.doce_atual.valor))
-
-    def finalizar_cad(self):
-        if self.item.currentText() == '' or self.quantidade.text() == '' or self.tipo.currentText() == '' or self.valor.text() == '':
-            print('Dados obrigatórios *')
-        else:
-            print(f"Cliente: {self.cliente_atual.nome}")
-            print
-            
-            self.close()
 
     def cancelar_cad(self):
         self.close()

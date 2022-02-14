@@ -5,14 +5,13 @@ import model.vendas as vendas
 def createTableVendas(cursor):
 
     cursor.execute("""
-
     CREATE TABLE IF NOT EXISTS "Vendas" (
-        "Id"	INTEGER,
-        "Item"	TEXT NOT NULL,
-        "Quantidade"	NUMERIC NOT NULL,
-        "Tipo"	TEXT NOT NULL,
-        "Valor"	REAL NOT NULL,
-        PRIMARY KEY("Id" AUTOINCREMENT)
+	"Id"	INTEGER UNIQUE,
+	"Item"	TEXT NOT NULL,
+	"Quantidade"	INTEGER NOT NULL,
+	"Tipo"	TEXT NOT NULL,
+	"Valor"	REAL NOT NULL,
+	PRIMARY KEY("Id" AUTOINCREMENT)
     );
     """)
 

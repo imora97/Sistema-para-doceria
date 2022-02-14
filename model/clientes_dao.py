@@ -6,10 +6,12 @@ def createTableClientes(cursor):
 
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS "Clientes" (
-        "Id"	INTEGER,
-        "Nome"	TEXT NOT NULL,
-        "Telefone"	TEXT NOT NULL,
-        PRIMARY KEY("Id" AUTOINCREMENT)
+	"Id"	INTEGER UNIQUE,
+	"Nome"	TEXT NOT NULL,
+	"Telefone"	TEXT NOT NULL,
+	"id_doce"	INTEGER,
+	PRIMARY KEY("Id" AUTOINCREMENT),
+	FOREIGN KEY("id_doce") REFERENCES "Doces"("Id")
     );
     """)
 

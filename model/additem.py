@@ -1,4 +1,3 @@
-from controller.cad_vendas import CadVenda
 
 class add_item():
 

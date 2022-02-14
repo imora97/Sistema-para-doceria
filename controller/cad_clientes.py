@@ -16,7 +16,7 @@ class CadCliente(QWidget):
         # lista
         self.lista_clientes = None
 
-        self.finalizar.clicked.connect(self.salvar_cliente)
+        self.salvar.clicked.connect(self.salvar_cliente)
         self.cancelar.clicked.connect(self.cancelar_cliente)
         self.limpa.clicked.connect(self.limpar)
         self.excluir_button.clicked.connect(self.excluir)
@@ -25,7 +25,8 @@ class CadCliente(QWidget):
         if self.nome.text() == '' or self.telefone.text() == '':
             print('\033[7;35;44mDados obrigatórios *\033[m') #código de cor da fonte
 
-            return None
+        else:
+            print('\033[4;35mLogin salvo com sucesso\033[m')
             
         self.close()
         

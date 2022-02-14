@@ -15,7 +15,7 @@ class CadDoce(QWidget):
         # lista
         self.lista_doces = None
 
-        self.finalizar.clicked.connect(self.salvar_doce)
+        self.salvar.clicked.connect(self.salvar_doce)
         self.cancelar.clicked.connect(self.cancelar_doce)
         self.cad_v.clicked.connect(self.abre_cad_venda)
         self.limpa.clicked.connect(self.limpar)
@@ -53,10 +53,6 @@ class CadDoce(QWidget):
         self.tabela.setItem(rowCount, 3, tipo)
         self.tabela.setItem(rowCount, 4, valor)
 
-    def abre_cad_venda(self):
-        self.venda_window = CadVenda(self)
-        self.venda_window.show()
-
     def cancelar_doce(self):
         self.close()
 
@@ -72,3 +68,7 @@ class CadDoce(QWidget):
         self.peso.clear()
         self.tipo.clear()
         self.valor.clear()
+
+    def abre_cad_venda(self):
+        self.venda_window = CadVenda(self)
+        self.venda_window.show()

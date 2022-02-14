@@ -208,7 +208,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="finalizar">
+    <widget class="QPushButton" name="salvar">
      <property name="font">
       <font>
        <family>Segoe Print</family>
@@ -216,7 +216,7 @@
       </font>
      </property>
      <property name="text">
-      <string>Finalizar</string>
+      <string>Salvar</string>
      </property>
     </widget>
    </item>

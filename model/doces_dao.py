@@ -1,3 +1,4 @@
+from sqlite3 import Cursor
 import model.database as database
 import model.doces as doces
 
@@ -6,16 +7,18 @@ def createTableDoces(cursor):
 
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS "Doces" (
-        "Id"	INTEGER,
-        "Nome"	TEXT NOT NULL,
-        "Peso"	TEXT NOT NULL,
-        "Tipo"	TEXT NOT NULL,
-        "Valor"	REAL NOT NULL,
-        PRIMARY KEY("Id" AUTOINCREMENT)
+	"Id"	INTEGER UNIQUE,
+	"Nome"	TEXT NOT NULL,
+	"Peso"	TEXT NOT NULL,
+	"Tipo"	TEXT NOT NULL,
+	"Valor"	REAL NOT NULL,
+	"id_cliente"	INTEGER,
+	PRIMARY KEY("Id" AUTOINCREMENT),
+	FOREIGN KEY("id_cliente") REFERENCES "Clientes"("Id")
     );
     """)
 
-def getCatalogo(pesquisa = ''):
+"""def getCatalogo(pesquisa):
     conn = database.connect_database()
     cursor = conn.cursor()
     pesquisa = ""+pesquisa+"%"
@@ -31,7 +34,24 @@ def getCatalogo(pesquisa = ''):
         novocd = doces(id, nome, peso, tipo, valor)
         lista_doces.append(novocd)
     conn.close()
-    return lista_doces
+    return lista_doces"""
+
+### Teste
+def listar(pesquisa):
+    conn = database.connect_database()
+    cursor = conn.cursor()
+    pesquisa = ""+pesquisa+"%"
+    cursor.execute('SELECT * FROM Catalogo WHERE nome = ?', [pesquisa])
+
+    for l in cursor.fetchall():
+        print(l)
+        try:
+            print('Pesquisa')
+            pesquisa = str(input('Digite o nome'))
+            listar(pesquisa)
+        except:
+            print('ERRO')
+    
 
 def insert(doces):
     try: # tenta executar o código
