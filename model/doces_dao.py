@@ -18,7 +18,7 @@ def createTableDoces(cursor):
     );
     """)
 
-"""def getCatalogo(pesquisa):
+def getCatalogo(pesquisa):
     conn = database.connect_database()
     cursor = conn.cursor()
     pesquisa = ""+pesquisa+"%"
@@ -34,25 +34,8 @@ def createTableDoces(cursor):
         novocd = doces(id, nome, peso, tipo, valor)
         lista_doces.append(novocd)
     conn.close()
-    return lista_doces"""
-
-### Teste
-def listar(pesquisa):
-    conn = database.connect_database()
-    cursor = conn.cursor()
-    pesquisa = ""+pesquisa+"%"
-    cursor.execute('SELECT * FROM Catalogo WHERE nome = ?', [pesquisa])
-
-    for l in cursor.fetchall():
-        print(l)
-        try:
-            print('Pesquisa')
-            pesquisa = str(input('Digite o nome'))
-            listar(pesquisa)
-        except:
-            print('ERRO')
+    return lista_doces
     
-
 def insert(doces):
     try: # tenta executar o código
         conn = database.connect()
