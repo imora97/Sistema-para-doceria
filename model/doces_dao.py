@@ -1,4 +1,3 @@
-from sqlite3 import Cursor
 import model.database as database
 import model.doces as doces
 
@@ -7,14 +6,14 @@ def createTableDoces(cursor):
 
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS "Doces" (
-	"Id"	INTEGER UNIQUE,
-	"Nome"	TEXT NOT NULL,
-	"Peso"	TEXT NOT NULL,
-	"Tipo"	TEXT NOT NULL,
-	"Valor"	REAL NOT NULL,
-	"id_cliente"	INTEGER,
-	PRIMARY KEY("Id" AUTOINCREMENT),
-	FOREIGN KEY("id_cliente") REFERENCES "Clientes"("Id")
+    "Id"	INTEGER UNIQUE,
+    "Nome"	TEXT NOT NULL,
+    "Peso"	TEXT NOT NULL,
+    "Tipo"	TEXT NOT NULL,
+    "Valor_uni"	REAL NOT NULL,
+    "id_cliente"	INTEGER,
+    FOREIGN KEY("id_cliente") REFERENCES "Clientes"("Id"),
+    PRIMARY KEY("Id" AUTOINCREMENT)
     );
     """)
 

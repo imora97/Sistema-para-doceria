@@ -8,9 +8,9 @@ def createTableVendas(cursor):
     CREATE TABLE IF NOT EXISTS "Vendas" (
 	"Id"	INTEGER UNIQUE,
 	"Item"	TEXT NOT NULL,
-	"Quantidade"	INTEGER NOT NULL,
+	"Quantidade"	TEXT NOT NULL,
 	"Tipo"	TEXT NOT NULL,
-	"Valor"	REAL NOT NULL,
+	"R$"	REAL NOT NULL,
 	PRIMARY KEY("Id" AUTOINCREMENT)
     );
     """)

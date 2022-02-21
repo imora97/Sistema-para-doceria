@@ -9,9 +9,7 @@ def createTableClientes(cursor):
 	"Id"	INTEGER UNIQUE,
 	"Nome"	TEXT NOT NULL,
 	"Telefone"	TEXT NOT NULL,
-	"id_doce"	INTEGER,
-	PRIMARY KEY("Id" AUTOINCREMENT),
-	FOREIGN KEY("id_doce") REFERENCES "Doces"("Id")
+	PRIMARY KEY("Id" AUTOINCREMENT)
     );
     """)
 

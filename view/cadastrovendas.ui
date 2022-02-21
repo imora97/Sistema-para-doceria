@@ -295,7 +295,7 @@
      </column>
      <column>
       <property name="text">
-       <string>Valor</string>
+       <string>R$</string>
       </property>
       <property name="font">
        <font>
